@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">livelocation</string>
+
+    <string name="permission_required_message">Allow location permission</string>
+    <string name="settings_required_message">Turn on device location</string>
+
+    <string name="action_title">OK</string>
+
 </resources>

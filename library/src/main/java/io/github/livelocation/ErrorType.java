@@ -1,0 +1,11 @@
+package io.github.livelocation;
+
+public enum ErrorType {
+    SETTINGS_CHANGE_REQUIRED,
+    SETTINGS_CHANGE_DENIED,
+    SETTINGS_CHANGE_UNAVAILABLE,
+    PERMISSIONS_REQUIRED,
+    PERMISSIONS_DENIED,
+    LOCATION_API,
+    UNKNOWN
+}
