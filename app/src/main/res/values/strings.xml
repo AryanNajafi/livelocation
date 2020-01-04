@@ -1,9 +1,41 @@
 <resources>
-    <string name="app_name">livelocation</string>
+    <string name="app_name">LiveLocation</string>
 
     <string name="permission_required_message">Allow location permission</string>
     <string name="settings_required_message">Turn on device location</string>
 
     <string name="action_title">OK</string>
 
+    <string name="button_start">Start Updates</string>
+    <string name="button_stop">Stop Updates</string>
+
+    <string name="location_data_format">Latitude: %f\nLongitude: %f\nAccuracy: %f</string>
+    <string name="priority_title">Location updates priority</string>
+    <string name="priority_high_accuracy">High Accuracy</string>
+    <string name="priority_balanced_power_accuracy">Balanced Power Accuracy</string>
+    <string name="priority_low_power">Low Power</string>
+    <string name="priority_no_power">No Power</string>
+
+    <string name="interval_title">Location updates interval</string>
+
+    <string-array name="priority_array">
+        <item>High Accuracy</item>
+        <item>Balanced Power Accuracy</item>
+        <item>Low Power</item>
+        <item>No Power</item>
+    </string-array>
+
+    <string-array name="interval_array">
+        <item>1000 milliseconds</item>
+        <item>1500 milliseconds</item>
+        <item>2000 milliseconds</item>
+        <item>2500 milliseconds</item>
+        <item>3000 milliseconds</item>
+        <item>3500 milliseconds</item>
+        <item>4000 milliseconds</item>
+        <item>4500 milliseconds</item>
+        <item>5000 milliseconds</item>
+        <item>5500 milliseconds</item>
+        <item>6000 milliseconds</item>
+    </string-array>
 </resources>

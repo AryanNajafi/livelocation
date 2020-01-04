@@ -9,13 +9,12 @@ public abstract class LocationObserver implements Observer<Result> {
 
     @Override
     public void onChanged(Result result) {
-        if (result.isUsed()) {
-            return;
-        }
-
         if (result.getState() == State.SUCCESS) {
             onSuccess(result.getLocation());
         } else {
+            if (result.isErrorUsed()) {
+                return;
+            }
             onFailure(result.getLocationError());
         }
     }
