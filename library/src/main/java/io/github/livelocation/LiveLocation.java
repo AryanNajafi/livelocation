@@ -243,7 +243,11 @@ public class LiveLocation extends LiveData<Result> {
     private void checkPermissionsResult(int grantResult) {
         if (grantResult == PackageManager.PERMISSION_GRANTED) {
             resolvableErrorDispatched = false;
-            if (!updatesRequested) {
+            if (updatesRequested) {
+                if (hasActiveObservers()) {
+                    checkLocationUpdates();
+                }
+            } else {
                 getLastKnownLocation();
             }
         } else {
