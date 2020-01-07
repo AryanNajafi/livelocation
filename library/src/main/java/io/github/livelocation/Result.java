@@ -8,7 +8,7 @@ public class Result {
     private final Location location;
     private final LocationError error;
 
-    private boolean errorUsed;
+    private boolean hasBeenHandled = false;
 
     private Result(State state, Location location, LocationError error) {
         this.state = state;
@@ -33,11 +33,12 @@ public class Result {
     }
 
     public Location getLocation() {
+        hasBeenHandled = true;
         return location;
     }
 
     public LocationError getLocationError() {
-        errorUsed = true;
+        hasBeenHandled = true;
         return error;
     }
 
@@ -49,9 +50,7 @@ public class Result {
         return state == State.SUCCESS;
     }
 
-    boolean isErrorUsed() {
-        return errorUsed;
+    public boolean isResultHandled() {
+        return hasBeenHandled;
     }
-
-
 }
