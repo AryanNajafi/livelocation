@@ -161,6 +161,10 @@ public class LiveLocation extends LiveData<Result> {
                     public void onFailure(@NonNull Exception e) {
                         if (e instanceof SecurityException) {
                             setValue(Result.failure(ErrorType.PERMISSIONS_REQUIRED));
+                        } else if (e instanceof ApiException) {
+                            setValue(Result.failure(ErrorType.LOCATION_API, e));
+                        } else {
+                            setValue(Result.failure(ErrorType.UNKNOWN));
                         }
                     }
                 });
