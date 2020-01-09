@@ -22,6 +22,8 @@ android {
 }
 
 dependencies {
-    api 'androidx.lifecycle:lifecycle-livedata-core:2.2.0-rc03'
+    api 'androidx.lifecycle:lifecycle-livedata-core:2.1.0'
     api 'com.google.android.gms:play-services-location:17.0.0'
 }
+
+apply from: 'bintray.gradle'
