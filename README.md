@@ -1,6 +1,10 @@
 # LiveLocation
 LiveLocation is a library to simplify the usage of the Android fused location provider along with Android location permissions, device location settings and Activity lifecycle. 
 
+## Download
+```groovy
+implementation 'io.github:livelocation:1.0.0-alpha01'
+```
 ## Using LiveLocation
 
 ### Get the last known location
